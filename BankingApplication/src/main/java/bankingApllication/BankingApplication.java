@@ -20,16 +20,12 @@ public class BankingApplication {
 	Scanner scanner = new Scanner(System.in);
 	
 	BankingApplication(){
-//	This is a constructor to get user name, greet user, show application options and call the various application methods
+//	This is a constructor to get username, greet user, show application options and call the various application methods
 		System.out.print("Enter your name: ");
 		String name = scanner.nextLine();
 		System.out.printf("Welcome %s\n\n",name );
 			
-		System.out.println("1.) Check balance\n"
-						 + "2.) Deposit\n"
-						 + "3.) Withdraw\n"
-						 + "4.) Check previous transaction\n"
-						 + "5.) Exit");
+		System.out.println(" 1.) Check balance\n 2.) Deposit\n 3.) Withdraw\n 4.) Check previous transaction\n 5.) Exit");
 		
 		int option;
 		do {
@@ -50,7 +46,7 @@ public class BankingApplication {
 						System.out.print("You don't have a withdrawable balance\n");
 					}
 					else {
-						withdraw(); //Call the withdraw method for cash withdrawal
+						withdraw(); //Call the withdrawal method for cash withdrawal
 					}
 					break;
 				case 4 :
@@ -86,8 +82,7 @@ public class BankingApplication {
 			amount = scanner.nextInt();
 			if (amount != 0) {
 				if (amount > balance) {
-					System.out.print("\nInsufficient balance to carry out transaction\n"
-								   + "Enter a lesser amount\n\n");
+					System.out.print("\nInsufficient balance to carry out transaction\n Enter a lesser amount\n\n");
 				}
 				else {	
 					this.previousTransaction = -amount;
@@ -108,14 +103,14 @@ public class BankingApplication {
 			System.out.printf("You withdrew %,d\n",Math.abs(previousTransaction));
 		}
 		else {
-			System.out.println("No transaction occured\n");
+			System.out.println("No transaction occurred\n");
 		}
 	}
 	
 //	This is a getter method for user's account balance
 	void getBalance() {
 		if (balance <=0) {
-			System.out.println("Your acount is empty");
+			System.out.println("Your account is empty");
 		}
 		else {
 			System.out.printf("Your balance is %,d\n",balance);
