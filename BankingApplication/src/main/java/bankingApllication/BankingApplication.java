@@ -43,7 +43,7 @@ public class BankingApplication {
 					break;
 				case 3 :
 					if (balance <= 0) {
-						System.out.print("You don't have a withdrawable balance\n");
+						System.out.print("You don't have a withdraw balance\n");
 					}
 					else {
 						withdraw(); //Call the withdrawal method for cash withdrawal
