@@ -1,4 +1,4 @@
-package bankingApllication;
+package main.java.bankingApllication;
 
 public class Main {
 
